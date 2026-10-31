@@ -4,15 +4,19 @@
 
 The compatibility question reaches beyond Loop, Trio and AAPS. Uploaders choose client keys, followers use returned keys to match and deduplicate records, and bridges use them to replace or delete earlier uploads. A common field can simplify the ecosystem, but changing a field name, its value, its uniqueness rules or its lookup behavior are separate migrations.
 
-The working inventory below covers **23 project families** for coordination and acceptance testing, with two additional existing-installation cases. It is a practical main scope, not a census of installations or a claim that every listed project has the same adoption. The [extended audit](ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) retains other source findings without making every historical app a prerequisite for agreement.
+The research inventory below covers **23 project families**, with two additional existing-installation cases. It is a practical audit scope, not a census of installations or a claim that every listed project has the same adoption. The updated graphic focuses on **20 families**. The [extended audit](ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) retains other source findings without making every historical app a prerequisite for agreement.
+
+**Adopted planning rule: `_id` is reserved for Nightscout.** Apps omit `_id` from uploaded record data; they may read and reference an existing server-assigned `_id` through a supported API. The [server owned identifier migration plan](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md) records the target contract, legacy transition and acceptance criteria. The common client field's name and uniqueness rules remain separate coordination decisions.
 
 ## Identifier overview graphic
 
-![Identifier fields read and written by 23 main Nightscout app families and two older-installation compatibility cases](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png)
+![Current identifier use by 20 Nightscout app families, with server owned _id policy and migration or review markers on _id writes](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png)
 
 [Full resolution PNG](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png) · [Editable SVG](ecosystem-identifier-compatibility-2026-10-31/identifier-map.svg)
 
-The markers distinguish writes, reads and ID-based operations, and hub identity fields. A dash means that use was not established in the reviewed paths; it does not assert that an app never uses the field. The per-app notes below give the record type, API and source qualifications.
+The markers distinguish writes, reads and ID-based operations, and hub identity fields. Highlighted `_id` writes require migration or payload review against the target rule; read/reference use remains permitted. The chart shows observed behavior, not a whole-app compliance verdict. A dash means that use was not established in the reviewed paths; it does not assert that an app never uses the field.
+
+Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader have been removed from the graphic. Their research entries below are retained as part of the broader audit. The graphic contains 19 main families plus GlucoseDirect as an older-installation case.
 
 ## Relationship to Ben's research
 
@@ -30,7 +34,7 @@ The source review adds two particularly relevant details: **Trio's upload models
 
 | Term | Meaning and compatibility concern |
 | --- | --- |
-| `_id` | Storage identity in the Nightscout model and a legacy wire field. Existing clients also send values here, including UUIDs and generated 24-character strings. Older clients cache and use returned values for subsequent operations. |
+| `_id` | Reserved server-owned storage identity under the adopted plan. Apps may read and reference an existing value; they must not assign it in record data. Existing client uploads, including UUIDs and generated 24-character strings, need a documented compatibility transition. Cached server IDs remain usable. |
 | `identifier` | API v3's exposed record identifier and the direction of the current common-client-key work. Its relationship to `_id` varies by API, server and historical data. It must not be assumed to be a UUID or universally independent of `_id` in today's ecosystem. |
 | `id`, `syncIdentifier`, `uuid`, `NSCLIENT_ID` and source keys | Client or integration-specific fields. Some identify a logical source event or group rather than exactly one stored document. Equal spelling is not proof of equal semantics. |
 | Authentication subject IDs | A separate domain. A token or subject `_id` is not evidence of treatment or glucose record identity. |
@@ -132,7 +136,7 @@ The transcript does not contain the complete earlier agreement and has no public
 
 ## Compatibility risks and proposed transition
 
-These are recommendations for discussion, not amendments to the owning specification or evidence of maintainer sign-off.
+The `_id` ownership rule is adopted for planning in this fork through the [migration plan](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md). The other client-field and rollout choices below remain recommendations for discussion; they do not amend Ben's decision records or establish project-wide maintainer sign-off.
 
 | Change under consideration | Clients or patterns to check | Required migration question |
 | --- | --- | --- |
@@ -144,7 +148,7 @@ These are recommendations for discussion, not amendments to the owning specifica
 | Require a client identifier on every create | Loop CGM, OpenAPS, GDH, LibreLinkUp and other no-ID uploaders | Which API/release boundary makes this mandatory, and how do legacy writers continue? |
 | Change by-ID matching or resend behavior | AAPS v3, Juggluco v3, cached Loop IDs and bridge deletion/replacement | Does each collection retain its specified update, replacement, merge and delete semantics? |
 
-An additive transition should preserve existing fields and lookup behavior while clients adopt a common field. The eventual contract needs to define precedence when fields disagree, uniqueness per collection, stable retry behavior, how IDs are derived across devices, and how old cached values remain addressable. Backfill should preserve aliases where needed rather than silently changing the identity returned to existing clients.
+During the documented legacy transition, preserve existing client fields, aliases and lookup behavior. Updated clients omit `_id` from record data and keep supported references to existing storage IDs in routes or selectors. The eventual common-client-key contract needs to define precedence when fields disagree, uniqueness per collection, stable retry behavior, how IDs are derived across devices, and how old cached values remain addressable. Backfill should preserve aliases where needed rather than silently changing the identity returned to existing clients. Stricter enforcement follows an explicit API or release boundary in the [migration sequence](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md#migration-sequence).
 
 The new field's **name does not settle its semantics**. UUID-only validation is a separate decision; Ben's [format study](identifier-format-2026-10-17.md) already documents non-UUID values. Likewise, a source event key must not become a unique document key until duplicate analysis establishes that the mapping is valid.
 
@@ -152,7 +156,7 @@ Server changes should be assessed against a named release and collection contrac
 
 ## Proposed acceptance cases
 
-Use synthetic fixtures across the shipping baseline and target server, including old and new client payloads:
+Use synthetic fixtures across the shipping baseline and target server, including old and new client payloads. Also apply the [ownership policy acceptance criteria](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md#acceptance-criteria-for-the-ownership-policy):
 
 1. Trio glucose `id` plus legacy `_id` decoding; ordinary carb retry and deletion by `id`.
 2. Two Trio FPU siblings with the same `id` and different times, plus a true duplicate of one sibling. LoopFollow must keep the siblings and remove only the duplicate.

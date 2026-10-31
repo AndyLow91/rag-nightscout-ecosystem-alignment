@@ -20,6 +20,7 @@ make queue-check      # what CI runs: coverage, staleness of every generated vie
 
 ## Ecosystem identifier research
 
+- **[Server owned identifier migration plan](docs/40-migration/ecosystem-identifier-migration-plan-2026-10-31.md)** — adopted `_id` ownership rule in this fork, compatibility transition and acceptance criteria
 - **[Main apps and identifier compatibility](docs/60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md)** — 31 October 2026 inventory, updated Trio behavior, follower dependencies and proposed migration checks, extending Ben's research in this fork
 - [Extended source audit](docs/60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) — additional integrations and historical patterns outside the main coordination scope
 
