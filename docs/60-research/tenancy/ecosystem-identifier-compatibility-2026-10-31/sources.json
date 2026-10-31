@@ -224,7 +224,8 @@
       "commit_date": "2026-09-20T18:14:48Z",
       "files": [
         "LoopFollow/Controllers/Nightscout/Treatments.swift",
-        "Tests/NightscoutTreatmentDeduplicationTests.swift"
+        "Tests/NightscoutTreatmentDeduplicationTests.swift",
+        "LoopFollow/Treatments/TreatmentsView.swift"
       ]
     },
     {
