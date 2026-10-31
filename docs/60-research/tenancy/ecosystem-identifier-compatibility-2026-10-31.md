@@ -4,19 +4,19 @@
 
 The compatibility question reaches beyond Loop, Trio and AAPS. Uploaders choose client keys, followers use returned keys to match and deduplicate records, and bridges use them to replace or delete earlier uploads. A common field can simplify the ecosystem, but changing a field name, its value, its uniqueness rules or its lookup behavior are separate migrations.
 
-The research inventory below covers **23 project families**, with two additional existing-installation cases. It is a practical audit scope, not a census of installations or a claim that every listed project has the same adoption. The updated graphic focuses on **20 families**. The [extended audit](ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) retains other source findings without making every historical app a prerequisite for agreement.
+The research inventory below covers **23 project families**, with two additional existing-installation cases. It is a practical audit scope, not a census of installations or a claim that every listed project has the same adoption. The updated graphic focuses on **19 families**. The [extended audit](ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) retains other source findings without making every historical app a prerequisite for agreement.
 
 **Adopted planning rule: `_id` is reserved for Nightscout.** Apps omit `_id` from uploaded record data; they may read and reference an existing server-assigned `_id` through a supported API. The [server owned identifier migration plan](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md) records the target contract, legacy transition and acceptance criteria. The common client field's name and uniqueness rules remain separate coordination decisions.
 
 ## Identifier overview graphic
 
-![Current identifier use by 20 Nightscout app families, with server owned _id policy and migration or review markers on _id writes](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png)
+![Current identifier use by 19 Nightscout app families, with server owned _id policy and migration or review markers on _id writes](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png)
 
 [Full resolution PNG](ecosystem-identifier-compatibility-2026-10-31/identifier-map.png) · [Editable SVG](ecosystem-identifier-compatibility-2026-10-31/identifier-map.svg)
 
 The markers distinguish writes, reads and ID-based operations, and hub identity fields. Highlighted `_id` writes require migration or payload review against the target rule; read/reference use remains permitted. The chart shows observed behavior, not a whole-app compliance verdict. A dash means that use was not established in the reviewed paths; it does not assert that an app never uses the field.
 
-Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader have been removed from the graphic. Their research entries below are retained as part of the broader audit. The graphic contains 19 main families plus GlucoseDirect as an older-installation case.
+iAPS, Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader have been removed from the graphic. Their research entries below are retained as part of the broader audit. The graphic contains 18 main families plus GlucoseDirect as an older-installation case.
 
 ## Relationship to Ben's research
 

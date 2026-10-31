@@ -4,7 +4,7 @@
 
 Nightscout owns `_id`. External apps must omit it from record data they upload and must never generate, assign or change that storage key. Apps may read, cache and reference an existing server-assigned `_id` to address a record through a supported API. App-generated sync identity belongs in a separate field.
 
-The [ecosystem research and current-behavior graphic](../60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md) identify the affected paths. The graphic now covers **20 project families: 19 main families and GlucoseDirect as an older-installation case**. Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader are excluded from the graphic at the user's request; their original research remains available in the broader inventory.
+The [ecosystem research and current-behavior graphic](../60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md) identify the affected paths. The graphic now covers **19 project families: 18 main families and GlucoseDirect as an older-installation case**. iAPS, Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader are excluded from the graphic at the user's request; their original research remains available in the broader inventory.
 
 ## Ownership rules
 
