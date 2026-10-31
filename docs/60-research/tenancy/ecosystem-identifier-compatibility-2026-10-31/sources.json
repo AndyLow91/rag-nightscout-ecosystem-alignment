@@ -1,0 +1,489 @@
+{
+  "review_date": "2026-10-31",
+  "kind": "source audit, not executed migration tests or installation census",
+  "upstream_workspace_baseline": "5b40059ef14c55765c09112fa569b627ddceb467",
+  "repositories": [
+    {
+      "repository": "airmed-dev/meals",
+      "commit": "d76fa654265f0badfb5f6af8aeb7698b5042f669",
+      "branch_at_review": "main",
+      "commit_date": "2022-12-16T09:49:00Z",
+      "files": [
+        "meals/Integrations/Nightscout.swift"
+      ]
+    },
+    {
+      "repository": "andyrozman/ggc",
+      "commit": "602dcdead17e221621d9bf974d6e8bff7e42618c",
+      "branch_at_review": "dev",
+      "commit_date": "2024-04-20T19:50:50Z",
+      "files": [
+        "ggc-plugins/ggc-connect/src/main/java/ggc/connect/software/web/nightscout/data/dto/Treatment.java"
+      ]
+    },
+    {
+      "repository": "Artificial-Pancreas/iAPS",
+      "commit": "6cb69e77ad5e2c05abc375cf30831eb9af56bb06",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-04T13:46:01Z",
+      "files": [
+        "FreeAPS/Sources/Models/BloodGlucose.swift",
+        "FreeAPS/Sources/Models/NightscoutTreatment.swift"
+      ]
+    },
+    {
+      "repository": "blutz1982/go-nsexporter-libreview",
+      "commit": "0ad13004e33c8a6d70832b60c6c433fe8aa83221",
+      "branch_at_review": "main",
+      "commit_date": "2025-01-16T08:04:51Z",
+      "files": [
+        "pkg/nightscout/glucose.go",
+        "pkg/nightscout/treatments.go"
+      ]
+    },
+    {
+      "repository": "burnedikt/diasend-nightscout-bridge",
+      "commit": "04ba88413d4bd85f7ee57847357157faca25e0b9",
+      "branch_at_review": "main",
+      "commit_date": "2023-05-30T10:20:21Z",
+      "files": [
+        "src/adapter/treatments.ts"
+      ]
+    },
+    {
+      "repository": "carlrosell/looptune",
+      "commit": "f5f35d85898b17a8c5510e36cb899aea73667cb8",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-13T16:25:50Z",
+      "files": [
+        "Sources/LoopTuneKit/Nightscout/NightscoutDTOs.swift"
+      ]
+    },
+    {
+      "repository": "creepymonster/GlucoseDirect",
+      "commit": "ffe5500a010f0e14adef0653047c9d9f8cf550d7",
+      "branch_at_review": "release",
+      "commit_date": "2026-09-27T14:37:39Z",
+      "files": [
+        "App/Modules/Nightscout/Nightscout.swift"
+      ]
+    },
+    {
+      "repository": "ctqvva/JugglucoNG",
+      "commit": "11e6e29db7d9055c8fd2e96261812e16f2095f3d",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-31T15:03:49Z",
+      "files": [
+        "Common/src/main/cpp/net/watchserver/uploader.cpp",
+        "Common/src/mobile/java/tk/glucodata/data/journal/JournalTreatmentTransfer.kt"
+      ]
+    },
+    {
+      "repository": "domien-f/carelink-bridge",
+      "commit": "ab698ffd110514b8c0cfacfdd43691db4b09195d",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-20T08:03:36Z",
+      "files": [
+        "src/transform/index.ts"
+      ]
+    },
+    {
+      "repository": "ecc1/nightscout",
+      "commit": "c6ec02fa5f885e2899eb4da2f2f5335cb9b7661c",
+      "branch_at_review": "main",
+      "commit_date": "2021-10-12T21:27:09Z",
+      "files": [
+        "api.go"
+      ]
+    },
+    {
+      "repository": "FabianMeiswinkel/NightScoutReporter",
+      "commit": "4cbef355c28980b51a0ae5be9818353bb1721d85",
+      "branch_at_review": "master",
+      "commit_date": "2019-01-16T22:27:55Z",
+      "files": [
+        "src/NightScoutContracts/Treatment.cs"
+      ]
+    },
+    {
+      "repository": "Faifly/xDrip",
+      "commit": "7f009d8dd782ebae63ce18c5168047c7c7842047",
+      "branch_at_review": "develop",
+      "commit_date": "2021-11-29T10:27:27Z",
+      "files": [
+        "xDrip/Services/CloudSync/Codables/CTreatment.swift"
+      ]
+    },
+    {
+      "repository": "gestrich/NightscoutClient",
+      "commit": "43e6d39f28144a0e75f526320752d45d52c02cf8",
+      "branch_at_review": "main",
+      "commit_date": "2026-08-04T19:32:58Z",
+      "files": [
+        "Sources/NightscoutClient/NightScoutService.swift"
+      ]
+    },
+    {
+      "repository": "gestrich/NightscoutKit",
+      "commit": "d63fb7370522f0dd441cd790aa960e991e118cda",
+      "branch_at_review": null,
+      "commit_date": null,
+      "files": [
+        "Sources/NightscoutKit/Models/GlucoseEntry.swift",
+        "Sources/NightscoutKit/Models/Treatments/NightscoutTreatment.swift"
+      ]
+    },
+    {
+      "repository": "gh-davidr/NightscoutLoader",
+      "commit": "9257c1987f67e8ba7e2102486b8c4b2d2fcafbfd",
+      "branch_at_review": "master",
+      "commit_date": "2022-01-30T14:15:30Z",
+      "files": [
+        "src/main/java/entity/DBResultNightScout.java"
+      ]
+    },
+    {
+      "repository": "glycoview/nightscout-api",
+      "commit": "caee4c54b02377049753b99a2b7155d652df03c6",
+      "branch_at_review": "main",
+      "commit_date": "2026-04-17T15:26:33Z",
+      "files": [
+        "model/record.go"
+      ]
+    },
+    {
+      "repository": "gui-dos/DiaBLE",
+      "commit": "e6a909c88faeada49f461d30834174cd95db4042",
+      "branch_at_review": "main",
+      "commit_date": "2026-07-30T06:18:53Z",
+      "files": [
+        "DiaBLE/Nightscout.swift"
+      ]
+    },
+    {
+      "repository": "ivalkou/freeaps",
+      "commit": "3a2908c5cf664b5cb1fed2e63aadc89a3bd81761",
+      "branch_at_review": "master",
+      "commit_date": "2022-06-11T09:30:00Z",
+      "files": [
+        "FreeAPS/Sources/Models/BloodGlucose.swift"
+      ]
+    },
+    {
+      "repository": "j-kaltes/Juggluco",
+      "commit": "d8233ce3fe18ae57031a670c0c23677426733830",
+      "branch_at_review": "primary",
+      "commit_date": "2026-10-29T10:05:05Z",
+      "files": [
+        "Common/src/main/cpp/net/watchserver/uploadtreatment.cpp"
+      ]
+    },
+    {
+      "repository": "J-Nokwal/nightscout-nextjs",
+      "commit": "d1501aa257076096ba7c2d9f8e517a7fd7a02364",
+      "branch_at_review": "main",
+      "commit_date": "2026-07-17T14:04:43Z",
+      "files": [
+        "lib/db/adapters/mongo.ts"
+      ]
+    },
+    {
+      "repository": "JetFoxy/AAPSClientiOS",
+      "commit": "34d1864e57c13715dbe666e7db100d530fdc6227",
+      "branch_at_review": "main",
+      "commit_date": "2026-08-18T19:35:52Z",
+      "files": [
+        "Shared/Domain/NsMapping.swift",
+        "App/Treatments/NsTreatmentWriterLive.swift"
+      ]
+    },
+    {
+      "repository": "JohanDegraeve/xdripswift",
+      "commit": "ba37f261352eedfb7f518c4a38e2266acb0f95e9",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-20T14:40:57Z",
+      "files": [
+        "xDrip/Managers/Nightscout/BgReading+Nightscout.swift",
+        "xDrip/Utilities/UniqueId.swift",
+        "xDrip/Managers/Nightscout/NightscoutSyncManager.swift"
+      ]
+    },
+    {
+      "repository": "jwoglom/tconnectsync",
+      "commit": "4de47729c091f11e3265a4b21d0766bb201dfbc5",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-05T23:55:24Z",
+      "files": [
+        "tconnectsync/sync/tandemsource/process_user_mode.py"
+      ]
+    },
+    {
+      "repository": "loopandlearn/LoopFollow",
+      "commit": "4a74b781ad6836dd77eccc03bb08a42749dd59a6",
+      "branch_at_review": "main",
+      "commit_date": "2026-09-20T18:14:48Z",
+      "files": [
+        "LoopFollow/Controllers/Nightscout/Treatments.swift",
+        "Tests/NightscoutTreatmentDeduplicationTests.swift"
+      ]
+    },
+    {
+      "repository": "LoopKit/LoopCaregiver",
+      "commit": "a6abd2e9b350b7eaeb33975c3803ba60ad113cc4",
+      "branch_at_review": "dev",
+      "commit_date": "2026-10-30T23:17:40Z",
+      "files": [
+        "LoopCaregiver.xcworkspace/xcshareddata/swiftpm/Package.resolved"
+      ]
+    },
+    {
+      "repository": "loopkitdev/LoopEval",
+      "commit": "44f72d4b74eefe4e794555357aa8c58b04326f9c",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-31T18:31:36Z",
+      "files": [
+        "Sources/EvalCore/DataSource/NightscoutClient.swift",
+        "Sources/EvalCore/DataSource/NightscoutEvalDataSource.swift",
+        "analysis/loopeval_analysis/nightscout_export.py"
+      ]
+    },
+    {
+      "repository": "lumose-health/GlycemicGPT",
+      "commit": "d1a9adb73e46abc0599e493a095e4ef887e08762",
+      "branch_at_review": "main",
+      "commit_date": "2026-08-18T02:54:24Z",
+      "files": [
+        "apps/api/src/services/integrations/nightscout/client.py"
+      ]
+    },
+    {
+      "repository": "marciogranzotto/py-nightscout",
+      "commit": "a4a87768173095d7d22745a06a015cf2202345a0",
+      "branch_at_review": "master",
+      "commit_date": "2021-12-05T22:46:04Z",
+      "files": [
+        "py_nightscout/models.py"
+      ]
+    },
+    {
+      "repository": "mpangburn/NightscoutKit",
+      "commit": "474b15f5b40a4e664653dfbb6b6996189a39774c",
+      "branch_at_review": "master",
+      "commit_date": "2020-03-16T00:27:39Z",
+      "files": [
+        "Sources/NightscoutKit/Common/NightscoutIdentifier.swift"
+      ]
+    },
+    {
+      "repository": "nightscout/AndroidAPS",
+      "commit": "aa16db64196e570b15bf41e85422fc159c058308",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-16T12:02:39Z",
+      "files": [
+        "core/nssdk/src/main/kotlin/app/aaps/core/nssdk/networking/NightscoutRemoteService.kt",
+        "plugins/sync/src/main/kotlin/app/aaps/plugins/sync/nsclientV3/extensions/BolusExtension.kt",
+        "plugins/sync/src/main/kotlin/app/aaps/plugins/sync/nsclient/acks/NSAddAck.kt"
+      ]
+    },
+    {
+      "repository": "nightscout/nightguard",
+      "commit": "608be1b5484a177e143a7880040846926bd302fa",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-24T17:39:10Z",
+      "files": [
+        "nightguard/domain/treatment/TreatmentsStream.swift"
+      ]
+    },
+    {
+      "repository": "nightscout/nightscout-connect",
+      "commit": "4dde1ecdcad1fd923e69d458e5e2faa7bc78e4f1",
+      "branch_at_review": "main",
+      "commit_date": "2026-09-24T21:50:34Z",
+      "files": [
+        "lib/sources/glooko/map.js",
+        "lib/outputs/profile-sync.js",
+        "lib/sources/nightscout.js"
+      ]
+    },
+    {
+      "repository": "nightscout/nocturne",
+      "commit": "9a86c550f8432a2d042a869d252c51f3ec6f7787",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-31T16:00:01Z",
+      "files": [
+        "src/Core/Nocturne.Core.Models/Treatment.cs",
+        "src/API/Nocturne.API/Controllers/V3/TreatmentsController.cs"
+      ]
+    },
+    {
+      "repository": "nightscout/Trio",
+      "commit": "0b29cd53415e7f0e668677749cad8daf81c68c2f",
+      "branch_at_review": "main",
+      "commit_date": null,
+      "files": [
+        "Trio/Sources/Models/BloodGlucose.swift",
+        "Trio/Sources/APS/Storage/CarbsStorage.swift",
+        "Trio/Sources/APS/Storage/TempTargetsStorage.swift",
+        "Trio/Sources/Models/NightscoutTreatment.swift",
+        "Trio/Sources/Services/Network/Nightscout/NightscoutAPI.swift"
+      ]
+    },
+    {
+      "repository": "NightscoutFoundation/xDrip",
+      "commit": "c42cf55c6b972215654bc2a34ce563c87a7aa594",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-23T11:49:11Z",
+      "files": [
+        "app/src/main/java/com/eveningoutpost/dexdrip/utilitymodels/NightscoutUploader.java",
+        "app/src/main/java/com/eveningoutpost/dexdrip/utilitymodels/NightscoutTreatments.java"
+      ]
+    },
+    {
+      "repository": "openaps/oref0",
+      "commit": "88cf032aa74ff25f69464a7d9cd601ee3940c0b3",
+      "branch_at_review": "master",
+      "commit_date": "2022-06-19T02:18:47Z",
+      "files": [
+        "bin/ns-dedupe-treatments.sh"
+      ]
+    },
+    {
+      "repository": "pachi81/GlucoDataHandler",
+      "commit": "215b2f071f86942a5b9714cbf88808a71708a33f",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-02T15:35:31Z",
+      "files": [
+        "mobile/src/main/java/de/michelinside/glucodatahandler/transfer/NightscoutUploader.kt"
+      ]
+    },
+    {
+      "repository": "patrickdmiller/nightscout_socketio_client",
+      "commit": "47a2a023192d7457f07321ce78b4fc734a4ae651",
+      "branch_at_review": "master",
+      "commit_date": "2023-07-06T04:14:54Z",
+      "files": [
+        "src/ns-types.ts"
+      ]
+    },
+    {
+      "repository": "pazaan/600SeriesAndroidUploader",
+      "commit": "6a4048c5ae2a1707234dec6b1c3c15228b29496d",
+      "branch_at_review": "master",
+      "commit_date": "2022-05-14T00:06:43Z",
+      "files": [
+        "app/src/main/java/info/nightscout/android/upload/nightscout/TreatmentsEndpoints.java"
+      ]
+    },
+    {
+      "repository": "peisenh/loop-cr-review",
+      "commit": "dfa716228d93ca1a96431ff66518e2292311ee79",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-30T18:15:44Z",
+      "files": [
+        "tools/fetch-nightscout.py"
+      ]
+    },
+    {
+      "repository": "pmakhotkin/ottai-nightscout-uploader",
+      "commit": "19da1437404b29ce87a13568cf7c7c0e02007825",
+      "branch_at_review": "main",
+      "commit_date": "2026-04-07T07:10:21Z",
+      "files": [
+        "module.py"
+      ]
+    },
+    {
+      "repository": "SandraK82/Companion_FX",
+      "commit": "126cb191b15b7650c75bdf961abc2a477024d120",
+      "branch_at_review": "master",
+      "commit_date": "2026-01-13T13:15:11Z",
+      "files": [
+        "app/src/main/java/com/diabetesscreenreader/data/GlucoseReading.kt"
+      ]
+    },
+    {
+      "repository": "savek-cc/ha-nightscout-v3",
+      "commit": "57a17f072f32019937a1fed3e2952e38bb150e04",
+      "branch_at_review": "main",
+      "commit_date": "2026-04-24T20:45:42Z",
+      "files": [
+        "custom_components/nightscout_v3/history_store.py"
+      ]
+    },
+    {
+      "repository": "sid-luo/nightscout-for-cloudflare",
+      "commit": "4547581f95fcaf17b553a3efb49bf90d266c7e70",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-19T16:15:48Z",
+      "files": [
+        "src/api3/treatments.ts"
+      ]
+    },
+    {
+      "repository": "skalahonza/TidepoolToNightScoutSync",
+      "commit": "05fdadb4e5bc900034ccd9981194f4357885883c",
+      "branch_at_review": "master",
+      "commit_date": "2024-05-20T05:20:05Z",
+      "files": [
+        "src/Core/Services/TidepoolToNightScoutSyncer.cs",
+        "src/Core/Model/Nightscout/Profile.cs"
+      ]
+    },
+    {
+      "repository": "solazs/cgm-bridge",
+      "commit": "3a3f03b5848a0141bc0f0b45a392597ae6836050",
+      "branch_at_review": "main",
+      "commit_date": "2026-09-25T19:47:06Z",
+      "files": [
+        "src/cgm_bridge/nightscout.py"
+      ]
+    },
+    {
+      "repository": "SpikeApp/Spike",
+      "commit": "d11cc51a43e30b6fd0892914e66cce125ef53d16",
+      "branch_at_review": "master",
+      "commit_date": "2024-11-08T23:13:44Z",
+      "files": [
+        "src/services/NightscoutService.as"
+      ]
+    },
+    {
+      "repository": "t1dude/TrioFollower",
+      "commit": "297e32fb99a8ba88c15ae3c45958693f81375d67",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-23T12:24:58Z",
+      "files": [
+        "app/src/main/kotlin/com/trionsandroid/app/data/remote/TreatmentDto.kt",
+        "app/src/main/kotlin/com/trionsandroid/app/data/nightscout/NightscoutRepositoryImpl.kt"
+      ]
+    },
+    {
+      "repository": "timoschlueter/nightscout-librelink-up",
+      "commit": "bff2317f5cc0db4a1a40971bbf601c87ab0e856d",
+      "branch_at_review": "main",
+      "commit_date": "2026-03-04T20:31:51Z",
+      "files": [
+        "src/nightscout/apiv3.ts"
+      ]
+    },
+    {
+      "repository": "yaanfpv/cgm-relay",
+      "commit": "c8cbdf7986e38f2582476970aaf0b10cdff4b677",
+      "branch_at_review": "main",
+      "commit_date": "2026-10-17T15:26:10Z",
+      "files": [
+        "internal/nightscout/entries.go"
+      ]
+    },
+    {
+      "repository": "zreptil/nightscout-reporter-angular",
+      "commit": "c21559a1fa20eb0ff24300f8b2a64563ee200136",
+      "branch_at_review": "master",
+      "commit_date": "2026-10-22T16:25:22Z",
+      "files": [
+        "src/app/_model/nightscout/treatment-data.ts",
+        "src/app/_model/nightscout/entry-data.ts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "review_date": "2026-10-31",
+  "meaning": "GitHub metadata snapshot. Pushed dates and latest-release records are maintenance signals, not installed-use or universal current-version evidence. Includes legacy comparators outside the main scope.",
+  "projects": [
+    {
+      "repo": "nightscout/Trio",
+      "archived": false,
+      "pushed": "2026-10-31T14:08:43Z",
+      "release": "v1.0.2",
+      "released": "2026-10-07T19:40:39Z",
+      "release_url": "https://github.com/nightscout/Trio/releases/tag/v1.0.2"
+    },
+    {
+      "repo": "LoopKit/Loop",
+      "archived": false,
+      "pushed": "2026-10-31T19:50:24Z",
+      "release": "v3.4.4",
+      "released": "2024-10-09T23:14:25Z",
+      "release_url": "https://github.com/LoopKit/Loop/releases/tag/v3.4.4"
+    },
+    {
+      "repo": "nightscout/AndroidAPS",
+      "archived": false,
+      "pushed": "2026-10-31T19:51:04Z",
+      "release": "4.0.0-rc1",
+      "released": "2026-10-16T12:02:07Z",
+      "release_url": "https://github.com/nightscout/AndroidAPS/releases/tag/4.0.0-rc1"
+    },
+    {
+      "repo": "Artificial-Pancreas/iAPS",
+      "archived": false,
+      "pushed": "2026-10-31T14:05:31Z",
+      "release": "v8.3.8",
+      "released": "2026-10-03T17:52:14Z",
+      "release_url": "https://github.com/Artificial-Pancreas/iAPS/releases/tag/v8.3.8"
+    },
+    {
+      "repo": "NightscoutFoundation/xDrip",
+      "archived": false,
+      "pushed": "2026-10-23T12:35:27Z",
+      "release": "2026.10.23",
+      "released": "2026-10-23T12:35:27Z",
+      "release_url": "https://github.com/NightscoutFoundation/xDrip/releases/tag/2026.10.23"
+    },
+    {
+      "repo": "JohanDegraeve/xdripswift",
+      "archived": false,
+      "pushed": "2026-10-20T14:41:33Z",
+      "release": "7.2.0",
+      "released": "2026-10-20T14:55:54Z",
+      "release_url": "https://github.com/JohanDegraeve/xdripswift/releases/tag/7.2.0"
+    },
+    {
+      "repo": "loopandlearn/LoopFollow",
+      "archived": false,
+      "pushed": "2026-10-31T20:04:01Z",
+      "release": "v7.1.0",
+      "released": "2026-09-20T18:18:05Z",
+      "release_url": "https://github.com/loopandlearn/LoopFollow/releases/tag/v7.1.0"
+    },
+    {
+      "repo": "nightscout/nightguard",
+      "archived": false,
+      "pushed": "2026-10-24T17:41:51Z",
+      "release": "V4.7.0",
+      "released": "2026-10-24T17:41:51Z",
+      "release_url": "https://github.com/nightscout/nightguard/releases/tag/V4.7.0"
+    },
+    {
+      "repo": "j-kaltes/Juggluco",
+      "archived": false,
+      "pushed": "2026-10-29T10:05:27Z",
+      "release": "Newest",
+      "released": "2024-10-08T20:38:31Z",
+      "release_url": "https://github.com/j-kaltes/Juggluco/releases/tag/Newest"
+    },
+    {
+      "repo": "creepymonster/GlucoseDirect",
+      "archived": false,
+      "pushed": "2026-09-27T14:37:44Z",
+      "release": "1.0.0",
+      "released": "2022-07-25T06:04:40Z",
+      "release_url": "https://github.com/creepymonster/GlucoseDirect/releases/tag/1.0.0"
+    },
+    {
+      "repo": "SpikeApp/Spike",
+      "archived": false,
+      "pushed": "2024-11-08T23:13:50Z",
+      "release": "3.6.3",
+      "released": "2019-05-03T11:18:13Z",
+      "release_url": "https://github.com/SpikeApp/Spike/releases/tag/3.6.3"
+    },
+    {
+      "repo": "t1dude/TrioFollower",
+      "archived": false,
+      "pushed": "2026-10-23T12:25:01Z",
+      "release": "v0.5.3",
+      "released": "2026-10-23T12:29:29Z",
+      "release_url": "https://github.com/t1dude/TrioFollower/releases/tag/v0.5.3"
+    },
+    {
+      "repo": "LoopKit/LoopCaregiver",
+      "archived": false,
+      "pushed": "2026-10-30T23:17:40Z",
+      "release": null,
+      "released": null,
+      "release_url": null
+    },
+    {
+      "repo": "pachi81/GlucoDataHandler",
+      "archived": false,
+      "pushed": "2026-10-09T17:24:12Z",
+      "release": "2.5",
+      "released": "2026-10-02T15:36:58Z",
+      "release_url": "https://github.com/pachi81/GlucoDataHandler/releases/tag/2.5"
+    },
+    {
+      "repo": "jwoglom/tconnectsync",
+      "archived": false,
+      "pushed": "2026-10-05T23:55:50Z",
+      "release": "v3.0.3",
+      "released": "2026-10-01T20:07:42Z",
+      "release_url": "https://github.com/jwoglom/tconnectsync/releases/tag/v3.0.3"
+    },
+    {
+      "repo": "nightscout/nightscout-connect",
+      "archived": false,
+      "pushed": "2026-09-24T21:59:26Z",
+      "release": "v0.0.13",
+      "released": "2026-07-07T22:16:56Z",
+      "release_url": "https://github.com/nightscout/nightscout-connect/releases/tag/v0.0.13"
+    },
+    {
+      "repo": "timoschlueter/nightscout-librelink-up",
+      "archived": false,
+      "pushed": "2026-03-04T20:31:55Z",
+      "release": "v3.3.0",
+      "released": "2026-03-04T20:24:21Z",
+      "release_url": "https://github.com/timoschlueter/nightscout-librelink-up/releases/tag/v3.3.0"
+    },
+    {
+      "repo": "nightscout/nocturne",
+      "archived": false,
+      "pushed": "2026-10-31T16:00:01Z",
+      "release": "v0.3.0",
+      "released": "2026-10-27T10:01:54Z",
+      "release_url": "https://github.com/nightscout/nocturne/releases/tag/v0.3.0"
+    },
+    {
+      "repo": "zreptil/nightscout-reporter-angular",
+      "archived": false,
+      "pushed": "2026-10-22T16:25:42Z",
+      "release": "v4.0.3",
+      "released": "2023-01-29T14:45:18Z",
+      "release_url": "https://github.com/zreptil/nightscout-reporter-angular/releases/tag/v4.0.3"
+    },
+    {
+      "repo": "openaps/oref0",
+      "archived": false,
+      "pushed": "2026-10-17T21:18:05Z",
+      "release": "v0.7.1",
+      "released": "2022-06-19T02:17:47Z",
+      "release_url": "https://github.com/openaps/oref0/releases/tag/v0.7.1"
+    },
+    {
+      "repo": "ctqvva/JugglucoNG",
+      "archived": false,
+      "pushed": "2026-10-31T17:33:54Z",
+      "release": "nightly-2026-10-31-dad71b09343c",
+      "released": "2026-10-31T06:35:16Z",
+      "release_url": "https://github.com/ctqvva/JugglucoNG/releases/tag/nightly-2026-10-31-dad71b09343c"
+    },
+    {
+      "repo": "SandraK82/Companion_FX",
+      "archived": false,
+      "pushed": "2026-01-13T13:15:23Z",
+      "release": "v1.2",
+      "released": "2026-01-13T13:16:15Z",
+      "release_url": "https://github.com/SandraK82/Companion_FX/releases/tag/v1.2"
+    }
+  ]
+}

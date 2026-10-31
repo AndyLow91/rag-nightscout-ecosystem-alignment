@@ -18,6 +18,11 @@ make queue-status     # run the gates. THE measurement; `state` in the manifest 
 make queue-check      # what CI runs: coverage, staleness of every generated view, link integrity
 ```
 
+## Ecosystem identifier research
+
+- **[Main apps and identifier compatibility](docs/60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md)** — 31 October 2026 inventory, updated Trio behavior, follower dependencies and proposed migration checks, extending Ben's research in this fork
+- [Extended source audit](docs/60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) — additional integrations and historical patterns outside the main coordination scope
+
 ## Overview
 
 This workspace uses a "bootstrap + lockfile" approach where:
