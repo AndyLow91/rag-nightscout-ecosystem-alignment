@@ -6,7 +6,7 @@ The compatibility question reaches beyond Loop, Trio and AAPS. Uploaders choose 
 
 The research inventory below covers **23 project families**, with two additional existing-installation cases. It is a practical audit scope, not a census of installations or a claim that every listed project has the same adoption. The updated graphic focuses on **19 families**. The [extended audit](ecosystem-identifier-compatibility-2026-10-31/extended-audit.md) retains other source findings without making every historical app a prerequisite for agreement.
 
-**Adopted planning rule: `_id` is reserved for Nightscout.** Apps omit `_id` from uploaded record data; they may read and reference an existing server-assigned `_id` through a supported API. The [server owned identifier migration plan](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md) records the target contract, legacy transition and acceptance criteria. The common client field's name and uniqueness rules remain separate coordination decisions.
+**Adopted planning rule: `_id` is reserved for Nightscout.** Apps omit `_id` from uploaded record data; they may read and reference an existing server-assigned `_id` through a supported API. The [server owned identifier migration plan](../../40-migration/ecosystem-identifier-migration-plan-2026-10-31.md) records the target contract, legacy transition and acceptance criteria. Andy's [published Discord proposal](../../40-migration/ecosystem-identifier-proposal-2026-10-31.md) recommends `identifier` as the common client API field, with ecosystem agreement on its meaning, uniqueness and matching rules still pending. Ben's response raises conflict/resend merging versus replacement as the next discussion.
 
 ## Identifier overview graphic
 

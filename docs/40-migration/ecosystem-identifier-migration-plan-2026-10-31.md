@@ -2,6 +2,8 @@
 
 **Planning decision adopted in Andy Low's fork, 31 October 2026.** This records the agreed direction for this work. Implementation and release changes in Nightscout and client applications still need their respective maintainers' review.
 
+The [published Discord proposal and response](ecosystem-identifier-proposal-2026-10-31.md) record Andy's three-part rationale, recommendation of `identifier`, compatibility approach and offer to help with PRs, together with Ben's response on merge versus replacement. The recommendation is published for discussion; ecosystem agreement is pending.
+
 Nightscout owns `_id`. External apps must omit it from record data they upload and must never generate, assign or change that storage key. Apps may read, cache and reference an existing server-assigned `_id` to address a record through a supported API. App-generated sync identity belongs in a separate field.
 
 The [ecosystem research and current-behavior graphic](../60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md) identify the affected paths. The graphic now covers **19 project families: 18 main families and GlucoseDirect as an older-installation case**. iAPS, Sugarmate, JugglucoNG, Gluroo Global Connect, Home Assistant and the 600 Series Uploader are excluded from the graphic at the user's request; their original research remains available in the broader inventory.
@@ -23,11 +25,19 @@ On a future strict interface, an update addressed by a nonexistent storage `_id`
 
 This is a **Nightscout API policy**. MongoDB itself permits explicitly supplied `_id` values and automatically generates an ObjectId when one is absent. [MongoDB's documentation](https://www.mongodb.com/docs/manual/core/document/#the-id-field) explains that distinction. Ben's [identity rules I1 and I2](../30-design/platform/spec/identity.md#1-rules) already describe the hub/client ownership split and the existing API v1 compatibility exceptions.
 
-## Client field choice remains a separate decision
+## Proposed common client field
 
-Adopting server ownership of `_id` does not settle the common client field's name, value format or uniqueness rules. `identifier` is the current design direction in Ben's specification; this plan does not require a second immediate rename of Trio's `id` or another legacy field.
+The published proposal recommends **`identifier` as the common API field for client-generated record identity**, building on existing Nightscout API v3 support and Nocturne's existing exposure of that name. Ownership, generation, uniqueness and matching semantics still need alignment across the servers and clients. The [published proposal's technical context](ecosystem-identifier-proposal-2026-10-31.md#technical-context-for-readers) distinguishes today's API behavior from the target contract.
+
+Apps may keep their internal naming and map record identity to `identifier` at the API boundary. Adoption is gradual, with existing upload fields supported during migration; this recommendation does not mandate an immediate rename of Trio's `id` or another legacy field. The rationale is existing interface support and a shared contract, rather than a ranking of field usage or the identity of a particular author.
 
 Preserve current `id`, `syncIdentifier`, `uuid` and source-key behavior during migration. Before a common client field receives a unique index, verify that each key identifies one record in the collection. Trio FPU siblings can share `id`, and different Loop treatments can share `syncIdentifier`; neither can be promoted blindly into a unique document identifier. See the [duplicate study](../60-research/tenancy/identifier-duplicates-2026-10-17.md).
+
+## Next coordination topic on resends and conflicts
+
+As Ben's [published response](ecosystem-identifier-proposal-2026-10-31.md#bens-response-at-2129) notes, deciding identity is followed by agreeing conflict/resend behavior. Specify separately how an identical retry, a changed record, an omitted or null property, a concurrent update and a re-send after deletion are handled.
+
+Preserve existing replacement behavior where clients clear fields by leaving them out. A universal merge rule can retain stale properties that those clients intended to remove. Review the per-collection and per-operation contract against the [resend survey](../60-research/tenancy/identity-resend-survey-2026-10-29.md) and [recorded release decisions](../../releases/cgm-remote-monitor-16.0.0/decisions.md), including the treatment replacement decisions, before proposing changes. The common field alone does not settle merge, replacement or conflict ordering.
 
 ## Paths needing migration or payload review
 
@@ -48,10 +58,11 @@ The evidence links and exact source revisions for these paths are in the [main i
 ## Migration sequence
 
 1. **Record the target and audit payloads.** Distinguish client-generated keys, source-hub keys, legitimate destination selectors and body fields echoed from a previous read. Cover entries, treatments, profiles and other affected collections. Keep the current graphic as an observed-behavior baseline.
-2. **Prepare client changes and stable matching.** Update serializers so new record data omits `_id`. Retain returned server keys for addressing existing records. Preserve legacy client keys and retry/deletion behavior; resolve collisions before enabling unique client identifiers. Client field naming remains a coordinated decision.
-3. **Retain documented compatibility during rollout.** Keep the existing version-scoped API v1 behavior and recorded normalization quirks until their migration boundary is agreed. Do not weaken stricter API v3 behavior. Do not introduce silent dropping or blind translation of client keys as a substitute for a verified matching rule.
-4. **Validate old and updated clients together.** Use the cases below plus the [existing app-specific acceptance cases](../60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md#proposed-acceptance-cases). Preserve stored `_id` values and old cached references; no wholesale rewrite of existing record identity is required.
-5. **Enforce at an explicit API or release boundary.** Document which interfaces reject `_id` in record data, with a clear client-facing validation error and migration guidance. Validate the request before persisting data. Preserve supported `_id` references for reads, updates and deletion. Client and server releases do not need to change in lockstep.
+2. **Prepare client changes and stable matching.** Update serializers so new record data omits `_id`. Retain returned server keys for addressing existing records. Preserve legacy client keys and retry/deletion behavior; resolve collisions before enabling unique client identifiers. Use `identifier` as the proposed common API field, subject to agreement on the shared contract.
+3. **Publish the agreed schema and behavior in the Nightscout docs.** Define required and optional fields, ownership, value generation, uniqueness scope, encoding, per-collection matching, retry/update/delete behavior and the legacy migration rules. Include compatible examples so future integrations can follow one public contract.
+4. **Retain documented compatibility during rollout.** Keep the existing version-scoped API v1 behavior and recorded normalization quirks until their migration boundary is agreed. Do not weaken stricter API v3 behavior. Do not introduce silent dropping or blind translation of client keys as a substitute for a verified matching rule.
+5. **Validate old and updated clients together.** Use the cases below plus the [existing app-specific acceptance cases](../60-research/tenancy/ecosystem-identifier-compatibility-2026-10-31.md#proposed-acceptance-cases). Preserve stored `_id` values and old cached references; no wholesale rewrite of existing record identity is required. Review merge/replacement differences with the affected maintainers.
+6. **Defer new mandatory legacy-upload validation to a much later announced release.** Initial alignment preserves existing clients. After a sufficient migration period, an explicit API or release boundary may reject nonconforming record data with a clear client-facing validation error and migration guidance. Validate before persisting data, and preserve supported `_id` references for reads, updates and deletion. Client and server releases do not need to change in lockstep.
 
 An existing legacy exception is a transition mechanism, not permission for a new client to start assigning `_id`. The release boundary, deprecation period and final client-field contract remain decisions for the affected maintainers.
 
@@ -71,4 +82,4 @@ Use synthetic records on the shipping baseline and target interface. These are p
 
 ## Status
 
-The ownership rule and this migration approach are adopted for planning in this fork. The graphic and research explain current source behavior against that target. They do not change deployed servers, client code, Ben's historical decision records or project-wide consensus.
+The ownership rule and this migration approach are adopted for planning in this fork. The recommendation of `identifier` and the compatibility approach have been published in Discord for community discussion, alongside an offer to help with PRs. Conflict/resend behavior is the next coordination topic raised by Ben. The graphic and research explain current source behavior against the target; deployed servers, client code, historical decision records and ecosystem acceptance retain their separate status.
